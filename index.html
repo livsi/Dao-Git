@@ -1,153 +1,169 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ru">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Дао Git</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+	<link rel="stylesheet" href="imedicum-theme-shower/bower_components/hint.css/hint.css">
+	<link rel="stylesheet" href="imedicum-theme-shower/styles/screen.css">
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Git. Работаем в команде.</h1>
+		<p>iMedicum</p>
 	</header>
-	<section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#Cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
+
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>Git. Работаем в команде.</h2>
+			<p>Мини-лекция для MSK команды. Владислав Лежнев aka LiVsI</p>
+			<img src="pictures/cover_start.jpg" alt="">
+			<img class="logo" src="/pictures/logo.png">
+			<!--
+                To apply styles to the certain slides
+                set slide ID to get needed elements
+                -->
+			<style>
+				#Cover h2 {
+					margin: 10px 0 0 -100px;
+					color: #FFF;
+					text-align: center;
+					font-size: 70px;
 				}
-			#Cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
+
+				#Cover p {
+					margin: 0 0 0 20px;
+					text-align: left;
+					color: #FFF;
+					font-style: italic;
+					font-size: 16px;
 				}
+
 				#Cover p a {
-					color:#FFF;
-					}
-		</style>
-	</div></section>
+					color: #FFF;
+				}
+
+				#Cover .logo {
+					position: absolute;
+					top:30px;
+					left: 30px;
+				}
+			</style>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Команды Git.</h2>
+
+			<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre
+					style="margin: 0; line-height: 125%"><span
+					style="color: #c65d09; font-weight: bold">$</span> git<br>
+<span style="color: #888888;">usage: git [--version] [--help] [-C &lt;path&gt;] [-c name=value]</span><br>
+<span style="color: #888888;padding-left: 3em;">[--exec-path[=&lt;path&gt;]] [--html-path] [--man-path]</span><br>
+<span style="color: #888888;padding-left: 3em;">[--info-path] [-p|--paginate|--no-pager] [--no-replace-objects]</span><br>
+<span style="color: #888888;padding-left: 3em;">[--bare]</span><br>
+<span style="color: #888888;padding-left: 3em;">[--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;]</span><br>
+<span style="color: #888888;padding-left: 3em;">[--namespace=&lt;name&gt;] &lt;command&gt; [&lt;args&gt;]</span>
+</pre>
+			</div>
+
+			<p class="note next"><mark>PS:</mark> Да, я люблю git command line.</p>
+		</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>Shower Key Features</h2>
+		<h2>Часто используемые команды:</h2>
 		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>All modern browsers are supported</li>
-			<li>Slide themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
+			<li>Зная эти команды - можно решить <mark class="important">большинство</mark> вопросов взаимодействия с другими разработчиками.</li>
+			<li>Их совсем немного</li>
+			<li>Они часто повторяются в циклах работы с git-репозитарием</li>
+			<li>Они у каждого - свои</li>
+			<li>Если мне нужен стандартный коммит - я использую </li>
+			<pre><code><mark class="important">git commit --interactive</mark></code></pre>
 		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</div></section>
+	</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div></section>
+		<h2>Часто используемые команды <br>по мнению <span class="blue">git</span>[1]:</h2>
+		<div>
+			<span class="blue">add</span>       - добавить содержимое файлов в индекс git<br>
+			<span class="blue">bisect</span>    - выполняет бинарный поиск по истории коммитов.<br>
+			<span class="blue">branch</span>    - вывод, создание и удаление веток<br>
+			<span class="blue">checkout</span>  - получение ветки или части рабочего дерева<br>
+			<span class="blue">clone</span>     - клонировать репозитарий в указанную директорию<br>
+			<pre><code><mark class="important">еще не все :)</mark></code></pre>
+		</div>
+	</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>All Kind of Lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</div></section>
+		<h2>Часто используемые команды <br>по мнению <span class="blue">git</span>[2]:</h2>
+		<div>
+			<span class="blue">commit</span>    - записать изменения в репозитарий<br>
+			<span class="blue">diff</span>      - показать изменения между объектами репозитария<br>
+			<span class="blue">fetch</span>     - загрузить содержимое и ссылки из внешнего репозитария<br>
+			<span class="blue">grep</span>      - напечатать строки с заданным содержимым<br>
+			<span class="blue">init</span>      - создание репозитария с нуля<br>
+
+			<pre><code><mark class="important">еще не все :)</mark></code></pre>
+		</div>
+	</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</div></section>
+		<h2>Часто используемые команды <br>по мнению <span class="blue">git</span>[3]:</h2>
+		<div>
+			<span class="blue">log</span>        - показать лог коммитов<br>
+			<span class="blue">merge</span>      - объеденить две или более истории разработки месте<br>
+			<span class="blue">mv</span>         - премесить или переименовать объект репозитария<br>
+			<span class="blue">pull</span>       - получить и смерджить изменения из удаленного репозитария<br>
+			<span class="blue">push</span>       - передать изменения в удаленный репозитарий<br>
+			<pre><code><mark class="important">еще не все :)</mark></code></pre>
+		</div>
+	</div>
+	</section>
+
 	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Even Tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</div></section>
+		<h2>Часто используемые команды <br>по мнению <span class="blue">git</span>[4]:</h2>
+		<div>
+			<span class="blue">rebase</span>     - пересадка части локальных коммитов<br>
+			<span class="blue">reset</span>      - сбросить текущее состояние<br>
+			<span class="blue">rm</span>         - удаление файлов из рабочего дерева и/или репозитария<br>
+			<span class="blue">show</span>       - показать объекты репозитария<br>
+			<span class="blue">status</span>     - показать статус рабочей директории<br>
+			<span class="blue">tag</span>        - операции с тегами<br>
+			<pre><code><mark class="important">Теперь - все</mark></code></pre>
+		</div>
+	</div>
+	</section>
+
 	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
+		<h2>Основы работы в git - сценарии действий.</h2>
+		<img src="pictures/scenarii.png" alt="">
 		<style>
 			#Picture h2 {
 				color:#FFF;
+				position: relative;
+				top: 400px;
 				}
 		</style>
 	</div></section>
 	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
+		<h2>Начало работы с репозитарием.<br>С чистого листа.</h2>
 	</div></section>
+
 	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2>Клонируем из источника</h2>
+		<div>
+			<code>git clone ssh://ИМЯ_РЕПОЗИТАРИЯ</code>
+			<img src="pictures/mr-smith.png">
+		</div>
+		<p class="next">Наша Матрица - <img src="pictures/koan.png"></p>
 	</div></section>
+
 	<section class="slide shout" id="SeeMore"><div>
 		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
 		<style>

@@ -1,19 +1,19 @@
 {
   "name": "shower",
-  "description": "Shower HTML presentation engine",
+  "description": "Лекция git",
   "version": "1.0.15",
   "author": {
-    "name": "Vadim Makeev",
-    "url": "http://pepelsbey.net/"
+    "name": "livsi",
+    "url": "http://dr-livsi.ru"
   },
-  "homepage": "https://github.com/shower/shower",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/shower/shower.git"
-  },
-  "bugs": {
-    "url": "http://github.com/shower/shower/issues"
-  },
+//  "homepage": "https://github.com/shower/shower",
+//  "repository": {
+//    "type": "git",
+//    "url": "git://github.com/shower/shower.git"
+//  },
+//  "bugs": {
+//    "url": "http://github.com/shower/shower/issues"
+//  },
   "licenses": [
     {
       "type": "MIT",
@@ -36,6 +36,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compress": "^0.11.0",
     "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^0.9.1",
     "grunt-text-replace": "^0.3.12",
     "load-grunt-tasks": "^0.6.0"

@@ -95,7 +95,17 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		clean: ['temp']
+		clean: ['temp'],
+		watch: {
+			scripts: {
+				files: ['index.html'],
+				tasks: [],
+				options: {
+					spawn: false,
+					livereload: true
+				}
+			}
+		}
 	});
 
 	grunt.registerTask('publish', [
