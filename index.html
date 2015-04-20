@@ -151,35 +151,96 @@
 				}
 		</style>
 	</div></section>
-	<section class="slide shout"><div>
-		<h2>Начало работы с репозитарием.<br>С чистого листа.</h2>
+
+	<!--<section class="slide shout"><div>-->
+		<!--<h2>Начало работы с репозитарием.<br>С чистого листа.</h2>-->
+	<!--</div></section>-->
+	<section class="slide" lang="ru"><div>
+		<h2>Абсолютно новенький репкозиторий</h2>
+		<ul>
+			<li>Mы написали код в папке CODE, идем в него: cd //Путь_к_CODE</li>
+			<li>Создаем новый репозитарий
+				<ol>
+					<li>git init .</li>
+					<li>git add .</li>
+					<li>git commit -am "Первый коммит комом"</li>
+				</ol>
+			</li>
+			<li>Показываем наш код другим членам команды:
+				<ol>
+					<li>git remote add origin ssh://ORIGIN</li>
+					<li>git push</li>
+				</ol>
+			</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Клонируем из источника</h2>
-		<div>
-			<code>git clone ssh://ИМЯ_РЕПОЗИТАРИЯ</code>
-			<img src="pictures/mr-smith.png">
-		</div>
-		<p class="next">Наша Матрица - <img src="pictures/koan.png"></p>
+		<h2>Вот что вышло</h2>
+		<table><tr>
+			<td><img src="pictures/local-remote.jpg" height="70%"></td>
+			<td>
+				<img src="pictures/mr-smith.png" class="next" height="70%"></td>
+		</tr></table>
 	</div></section>
 
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower">See more on GitHub</a></h2>
+	<section class="slide"><div>
+		<h2>Как только вы опубликовали репку - она становится доступной</h2>
+		<table><tr>
+			<td><img src="pictures/common-repo.jpg"></td>
+			<td>
+				<img src="pictures/repca.png" class="next" height="30%"></td>
+		</tr></table>
+		<p class="next">И дедке и бабке и внучке с жучкой.<span class="next">И они дружной толпой начинают в нее комитить</span></p>
+	</div></section>
+
+	<section class="slide">
+		<div>
+			<h2>Чтобы не потерять контроль над кодом - следите, что меняется</h2>
+			<code>git fetch</code><br>
+			<code>git merge origin/master</code>
+			<h3>Или просто тяните в свой локальный репо изменения</h3>
+			<code>git pull</code>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Не скрывайте свой код от команды</h2>
+			<p>Пока вы не опубликовали его в origin - он виден только Вам</p>
+			<div style="float: left;width: 50%"><img src="pictures/no-talk.jpg" width="250"></div>
+			<div style="float: left;width: 50%">
+				<code>git push</code>
+				<div class="next">
+					Других тоже нужно слушать:<br>
+					<code>git pull</code><br>
+					<code>git push</code>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="slide cover" id="Cover2"><div>
+
+		<img src="pictures/cover_start.jpg" width="1000" alt="">
+		<h2>При подготовке к лекции ни один стейкхолдер не пострадал</h2>
 		<style>
-			#Picture h2 {
+			#Cover2 h2 {
+				margin: 10px 0 0 -100px;
+				color: #FFF;
+				text-align: center;
+
+			#Cover2 h2 {
 				color:#FFF;
-				}
-			#SeeMore h2 {
-				font-size:100px
-				}
-			#SeeMore img {
-				width:0.72em;
-				height:0.72em;
+				font-size:50px
 				}
 		</style>
 	</div></section>
-	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	<!--<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>-->
 	<!--
 		To hide progress bar from entire presentation
 		just remove “progress” element.
