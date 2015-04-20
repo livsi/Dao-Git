@@ -289,21 +289,31 @@
 <section class="slide">
 	<div>
 		<h2>Хозяйке на заметку</h2>
-		<div>Сколько коммитеров в iMedicum:
-		<code>git log --pretty=format:"%an <%aE>" | sort -u | wc -l </code>
-		</div>
-		<div>
-			Древовидный граф
-			<code>git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all</code><br>
-		</div>
-		<div>
-			Граф для текущей ветки
-			<code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>
-		</div>
 		<div>
 			Псевдонимы в Git
 			<code>git config --global alias.co checkout</code>
 			<code>git config --global alias.st status</code>
+		</div>
+	</div>
+</section>
+<section class="slide">
+	<div>
+		<h2>Хозяйке на заметку</h2>
+		<div>Сколько коммитеров в iMedicum:<br>
+		<code>git log --pretty=format:"%an <%aE>" | sort -u | wc -l </code>
+		</div>
+	</div>
+</section>
+<section class="slide">
+	<div>
+		<h2>Хозяйке на заметку</h2>
+		<div>
+			Древовидный граф<br>
+			<code>git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all</code><br>
+		</div>
+		<div>
+			Граф для текущей ветки<br>
+			<code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>
 		</div>
 	</div>
 </section>
