@@ -285,7 +285,30 @@
 		</style>
 	</div>
 </section>
-<!--<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>-->
+
+
+<section class="slide">
+	<div>
+		<h2>Хозяйке на заметку</h2>
+		<div>Сколько коммитеров в iMedicum:
+		<code>git log --pretty=format:"%an <%aE>" | sort -u | wc -l </code>
+		</div>
+		<div>
+			Древовидный граф
+			<code>git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all</code><br>
+		</div>
+		<div>
+			Граф для текущей ветки
+			<code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>
+		</div>
+		<div>
+			Псевдонимы в Git
+			<code>git config --global alias.co checkout</code>
+			<code>git config --global alias.st status</code>
+		</div>
+	</div>
+</section>
+<p class="badge"><a href="http://git-scm.com/book/ru/v1">Почитать на досуге</a></p>
 <!--
     To hide progress bar from entire presentation
     just remove “progress” element.
