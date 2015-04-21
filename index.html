@@ -236,14 +236,32 @@
 <section class="slide">
 	<div>
 		<h2>Чтобы не потерять контроль над кодом - следите, что меняется</h2>
-		<code>git fetch</code><br>
-		<code>git merge origin/master</code>
+		<div style="width: 50%; float: left">
+			<code>git fetch</code><br>
+			<code>git merge origin/master</code>
+<hr>
+			<div>Или просто тяните в свой локальный репо изменения</div>
+			<pre><code>git pull</code></pre>
 
-		<h3>Или просто тяните в свой локальный репо изменения</h3>
-		<code>git pull</code>
+		</div>
+		<div style="width: 50%; float: left">
+			<div class="next">
+			Вместе со всеми возможными <mark>багами</mark>
+			<br/>
+			<img src="pictures/trojan.png" width="100%">
+			</div>
+		</div>
+
+
 	</div>
 </section>
 
+
+<section class="slide cover">
+	<div>
+		<img src="pictures/konj-pedalnij-boevoj.jpg" alt="">
+	</div>
+</section>
 
 <section class="slide">
 	<div>
@@ -265,33 +283,44 @@
 	</div>
 </section>
 
-<section class="slide cover" id="Cover2">
+<section class="slide cover">
 	<div>
-
-		<img src="pictures/cover_start.jpg" width="1000" alt="">
-
-		<h2>При подготовке к лекции ни один стейкхолдер не пострадал</h2>
-		<style>
-			#Cover2 h2 {
-				margin: 10px 0 0 -100px;
-				color: #FFF;
-				text-align: center;
-
-			#Cover2 h2 {
-				color: #FFF;
-				font-size: 50px
-			}
-		</style>
+		<img src="pictures/labirint-otragenij.jpg" alt="">
+		<h2 style="color: red">
+			Ваша ветка - ваше персональное пространство, покажите его другим.
+		</h2>
 	</div>
 </section>
 
+<section class="slide">
+	<div>
+		<h2>Прячем все по карманам</h2>
+			<ul>
+				<li>
+					Спрятать
+					<code>git stash</code>
+				</li>
+				<li>
+					Проверить карманы
+					<code>git stash list</code>
+				</li>
+				<li>
+					Выложить из кармана
+					<code>git stash apply</code><br>
+					Выложить и удалить
+					<code>git stash pop</code>
+				</li>
+			</ul>
+
+	</div>
+</section>
 
 <section class="slide">
 	<div>
 		<h2>Хозяйке на заметку</h2>
 		<div>
 			Псевдонимы в Git<br>
-			<code>git config --global alias.co checkout</code>
+			<code>git config --global alias.co checkout</code><br>
 			<code>git config --global alias.st status</code>
 		</div>
 	</div>
@@ -301,6 +330,9 @@
 		<h2>Хозяйке на заметку</h2>
 		<div>Сколько коммитеров в iMedicum:<br>
 		<code>git log --pretty=format:"%an <%aE>" | sort -u | wc -l </code>
+		</div>
+		<div class="next">
+			<img src="pictures/iMedicum-commiters.png" alt="">
 		</div>
 	</div>
 </section>
@@ -313,7 +345,7 @@
 		</div>
 		<div>
 			Граф для текущей ветки<br>
-			<code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>
+			<code>log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short</code>
 		</div>
 	</div>
 </section>
@@ -321,7 +353,7 @@
 
 <section class="slide">
 	<div>
-		<h2>Хозяйке на заметку</h2>
+		<h2>Оригинальный репкозитарий</h2>
 		<div>
 			Удаление origin веток<br>
 			<code>git push origin :BRANCH</code><br>
@@ -332,10 +364,64 @@
 			Тащим к себе и отслеживаем ветку<br>
 			<code>git checkout -b BRANCH origin/BRANCH</code>
 		</div>
+	</div>
+</section>
+
+
+<section class="slide">
+	<div>
+		<h2>Теги</h2>
 		<div>
-			Прячем все по карманам<br>
-			<code>git stash</code>
+			Не все изменения одинаково стабильны<br>
+			Один из методов пометить стабильные состояния - это теги
 		</div>
+		<div>
+			Посмотреть<br>
+			<code>git tag</code><br>
+			Посмотреть в ограниченном колличестве<br>
+			<code>git tag -l 'v1.4.2.*'</code><br>
+			Создать<br>
+			<code>git tag -a v1.4 -m 'my version 1.4'</code>
+		</div>
+	</div>
+</section>
+<section class="slide">
+	<div>
+		<h2>Теги</h2>
+		<div>
+			Отправка<br>
+			<code>git push origin --tags</code><br>
+			Удаление<br>
+			<code>git tag -d tag_name</code><br>
+			<code>git push origin :refs/tags/tag_name</code><br>
+			Перемещение<br>
+			<code>git tag -f tag_name</code><br>
+			<code>git push -f origin tag_name</code>
+		</div>
+	</div>
+</section>
+
+<section class="slide">
+	<div>
+		<h2 style="color: red">Вопросы?</h2>
+		<div class="next"><img src="pictures/che_tam_u_hohlov.jpg"></div>
+	</div>
+</section>
+
+<section class="slide cover" id="Cover2">
+	<div>
+
+		<img src="pictures/cover_start.jpg" width="1000" alt="">
+
+		<h2>При подготовке к лекции ни один стейкхолдер не пострадал</h2>
+		<style>
+			#Cover2 h2 {
+				margin: 10px 0 0 -100px;
+				color: #FFF;
+				text-align: center;
+				font-size: 50px
+			}
+		</style>
 	</div>
 </section>
 
